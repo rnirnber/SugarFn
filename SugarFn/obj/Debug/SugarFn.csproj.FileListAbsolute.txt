@@ -1,0 +1,6 @@
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\bin\Debug\SugarFn.exe.config
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\bin\Debug\SugarFn.exe
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\bin\Debug\SugarFn.pdb
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\obj\Debug\SugarFn.exe
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\obj\Debug\SugarFn.pdb
+c:\users\raymond nirnberger\documents\visual studio 2013\Projects\SugarFn\SugarFn\obj\Debug\SugarFn.csprojResolveAssemblyReference.cache
