@@ -12,15 +12,15 @@ namespace SugarFn.Extensions
         {
             return new Func<bool>(() => !self());
         }
-        public static Func<T, bool> NOT<T>(this Func<T, bool> self)
+        public static Func<T, bool> NOT<T> (this Func<T, bool> self)
         {
             return new Func<T, bool>((T a) => !self(a));
         }
-        public static Func<T, T2, bool> NOT<T, T2>(this Func<T, T2, bool> self)
+        public static Func<T, T2, bool> NOT<T, T2> (this Func<T, T2, bool> self)
         {
             return new Func<T, T2, bool>((T a, T2 b) => !self(a, b));
         }
-        public static Func<T, T2, T3, bool> NOT<T, T2, T3>(this Func<T, T2, T3, bool> self)
+        public static Func<T, T2, T3, bool> NOT<T, T2, T3> (this Func<T, T2, T3, bool> self)
         {
             return new Func<T, T2, T3, bool>((T a, T2 b, T3 c) => !self(a, b, c));
         }
@@ -40,5 +40,6 @@ namespace SugarFn.Extensions
         {
             return new Func<T, T2, T3, T4, T5, T6, T7, bool>((T a, T2 b, T3 c, T4 d, T5 e, T6 f, T7 g) => !self(a, b, c, d, e, f, g));
         }
+
     }
 }
