@@ -9,3 +9,4 @@ C:\Users\rnirnber\Documents\Repos\SugarFn.git\SugarFn\bin\Debug\SugarFn.exe
 C:\Users\rnirnber\Documents\Repos\SugarFn.git\SugarFn\bin\Debug\SugarFn.pdb
 C:\Users\rnirnber\Documents\Repos\SugarFn.git\SugarFn\obj\Debug\SugarFn.exe
 C:\Users\rnirnber\Documents\Repos\SugarFn.git\SugarFn\obj\Debug\SugarFn.pdb
+C:\Users\RaymondNürnberger\Documents\GitHub\SugarFn\SugarFn\bin\Debug\SugarFn.exe.config

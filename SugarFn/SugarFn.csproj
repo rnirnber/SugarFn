@@ -44,7 +44,9 @@
     <Compile Include="Extensions\AND.cs" />
     <Compile Include="Extensions\Coalesce.cs" />
     <Compile Include="Extensions\DynamicInvoke.cs" />
+    <Compile Include="Extensions\First.cs" />
     <Compile Include="Extensions\Invoke.cs" />
+    <Compile Include="Extensions\Last.cs" />
     <Compile Include="Extensions\NOT.cs" />
     <Compile Include="Extensions\L_Obsolesce.cs" />
     <Compile Include="Extensions\Obsolesce.cs" />
