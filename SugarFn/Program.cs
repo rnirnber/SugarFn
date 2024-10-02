@@ -123,6 +123,24 @@ namespace SugarFn
             Console.WriteLine("Is Raymond not in list 2?");
             Console.WriteLine(is_raymond_not_in_list("Raymond", names_list_two));
 
+            // First and Last...
+            Console.WriteLine("\n\n");
+            Console.WriteLine("=============");
+            Console.WriteLine("First and Last");
+            Console.WriteLine("=============");
+
+            Console.WriteLine("Is Adam the first person in list 1?");
+            Console.WriteLine(names_list_one.IsFirst<string>("Adam"));
+            Console.WriteLine("Is Raymond the first person in list 1?");
+            Console.WriteLine(names_list_one.IsFirst<string>("Raymond"));
+
+            Console.WriteLine("\n\n===========");
+            Console.WriteLine("Is Raymond the last person in list 1?");
+            Console.WriteLine(names_list_one.IsLast<string>("Raymond"));
+            Console.WriteLine("Is Adam the last person in list 1?");
+            Console.WriteLine(names_list_one.IsLast<string>("Adam"));
+
+
 
             Console.WriteLine("Press any key to exit");
             var ignore_this = Console.ReadLine();

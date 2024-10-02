@@ -9,12 +9,12 @@ namespace SugarFn.Extensions
 {
     public static partial class _____SugarFnExtensions
     {
-        public static bool Last<T>(this ReadOnlyCollection<T> self, T item)
+        public static bool IsLast<T>(this ReadOnlyCollection<T> self, T item)
         {
             return item.GetHashCode() == self.Last().GetHashCode();
         }
 
-        public static bool Last<T>(this List<T> self, T item)
+        public static bool IsLast<T>(this List<T> self, T item)
         {
             return item.GetHashCode() == self.Last().GetHashCode();
         }
