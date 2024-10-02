@@ -11,6 +11,9 @@ namespace SugarFn
     {
         static void Main(string[] args)
         {
+            /*
+             * Testing all features of SugarFN*/
+
             // Example of "AND", single parameter
             var is_even = (Func<int, bool>) ((int x) => x % 2 == 0);
             var is_even_and_is_divisible_by_ten = is_even.AND<int>((int x) => x % 10 == 0);
@@ -126,7 +129,7 @@ namespace SugarFn
             // First and Last...
             Console.WriteLine("\n\n");
             Console.WriteLine("=============");
-            Console.WriteLine("First and Last");
+            Console.WriteLine("First and Last (List/Collection extension methods");
             Console.WriteLine("=============");
 
             Console.WriteLine("Is Adam the first person in list 1?");
