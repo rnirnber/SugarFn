@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using SugarFn.Extensions;
@@ -143,7 +144,42 @@ namespace SugarFn
             Console.WriteLine("Is Adam the last person in list 1?");
             Console.WriteLine(names_list_one.IsLast<string>("Adam"));
 
+            Console.WriteLine("\n\n=========");
+            Console.WriteLine("Left-Side Obsolesce");
+            Console.WriteLine("=============");
 
+            // original FN, sum 3 numbers
+            var left_side_fn1 = (Func<int, int, int, int>)((a, b, c) => a + b + c);
+            // hardcode 1st (left-to-right) parameter to be 50
+            var left_side_fn2 = left_side_fn1.LeftSideObsolesce<int, int, int, int>(50);
+            Console.WriteLine("Are we getting 50 + 10 + 10 (70) ???");
+            Console.WriteLine(left_side_fn2(10, 10));
+
+            // hardcode 2nd parameter to be 25
+            var left_side_fn3 = left_side_fn2.LeftSideObsolesce<int, int, int>(25);
+            Console.WriteLine("Are we getting 50 + 25 + 5 (80) ???");
+            Console.WriteLine(left_side_fn3(5));
+            // hardcode 3rd parameter to be 25
+            var left_side_fn4 = left_side_fn3.LeftSideObsolesce<int, int>(25);
+            Console.WriteLine("Are we getting 50 + 25 + 25 (100) ???");
+            Console.WriteLine(left_side_fn4());
+
+            Console.WriteLine("\n\n=========");
+            Console.WriteLine("Right-Side Obsolesce");
+            Console.WriteLine("=============");
+
+            // going from right-to-left
+            var right_side_fn1 = (Func<int, int, int, int>)((a, b, c) => a + b + c);
+            // hardcode value of 500 to 'c'
+            var right_side_fn2 = right_side_fn1.RightSideObsolesce<int, int, int, int>(500);
+            Console.WriteLine("Are we getting 100 + 100 + 500 (700) ???");
+            Console.WriteLine(right_side_fn2(100, 100));
+            var right_side_fn3 = right_side_fn2.RightSideObsolesce<int, int, int>(50);
+            Console.WriteLine("Are we getting 1000 + 50 + 500 (1550) ???");
+            Console.WriteLine(right_side_fn3(1000));
+            var right_side_fn4 = right_side_fn3.RightSideObsolesce<int, int>(1);
+            Console.WriteLine("Are we getting 500 + 50 + + 1 (551) ???");
+            Console.WriteLine(right_side_fn4());
 
             Console.WriteLine("Press any key to exit");
             var ignore_this = Console.ReadLine();

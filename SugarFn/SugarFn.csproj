@@ -49,11 +49,11 @@
     <Compile Include="Extensions\Invoke.cs" />
     <Compile Include="Extensions\Last.cs" />
     <Compile Include="Extensions\NOT.cs" />
-    <Compile Include="Extensions\L_Obsolesce.cs" />
+    <Compile Include="Extensions\LeftSideObsolesce.cs" />
     <Compile Include="Extensions\Obsolesce.cs" />
     <Compile Include="Extensions\OR.cs" />
     <Compile Include="Extensions\RefelectiveInvoke.cs" />
-    <Compile Include="Extensions\R_Obsolesce.cs" />
+    <Compile Include="Extensions\RightSideObsolesce.cs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
