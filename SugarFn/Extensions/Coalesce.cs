@@ -12,7 +12,7 @@ namespace SugarFn.Extensions
         {
             return new Func<T, T3>((T a) => fn(self(a)));
         }
-        public static Func<T, T2, T4> Colaesce<T, T2, T3, T4>(this Func<T, T2, T3> self, Func<T3, T4> fn)
+        public static Func<T, T2, T4> Coalesce<T, T2, T3, T4>(this Func<T, T2, T3> self, Func<T3, T4> fn)
         {
             return new Func<T, T2, T4>((T a, T2 b) => fn(self(a, b)));
         }

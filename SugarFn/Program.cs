@@ -169,8 +169,7 @@ namespace SugarFn
             Console.WriteLine("=============");
 
             // going from right-to-left
-            var right_side_fn1 = (Func<int, int, int, int>)((a, b, c) => a + b + c);
-            // hardcode value of 500 to 'c'
+            var right_side_fn1 = (Func<int, int, int, int>)((a, b, c) => a + b + c);            
             var right_side_fn2 = right_side_fn1.RightSideObsolesce<int, int, int, int>(500);
             Console.WriteLine("Are we getting 100 + 100 + 500 (700) ???");
             Console.WriteLine(right_side_fn2(100, 100));
@@ -180,6 +179,23 @@ namespace SugarFn
             var right_side_fn4 = right_side_fn3.RightSideObsolesce<int, int>(1);
             Console.WriteLine("Are we getting 500 + 50 + + 1 (551) ???");
             Console.WriteLine(right_side_fn4());
+
+            // Coalesce...
+            Console.WriteLine("\n\n==============");
+            Console.WriteLine("Coalesce...");
+            Console.WriteLine("=================");
+
+            var double_num = ((Func<int, int>)((x) => x * 2));
+            // 50 doubled will give us 100. 100 quadrupled will give us 400
+            var quadruple_num = ((Func<int, int>)((x) => x * 4));
+
+
+            var combined = double_num.Coalesce<int, int, int>(quadruple_num);
+
+            var first_result_coalesced = combined(50);
+
+            Console.WriteLine("Expected result (50 * 2) = 100, 100 * 4 = 400). Did we get 400?");
+            Console.WriteLine(first_result_coalesced);
 
             Console.WriteLine("Press any key to exit");
             var ignore_this = Console.ReadLine();
